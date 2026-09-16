@@ -90,6 +90,8 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 
 `Python` `CatBoost` `HistGradientBoosting` `Entity Embedding` `Ensemble` `Calibration` `Time-Series CV`
 
+→ [**lg-aimers**](https://github.com/Jeon-byeong-yoon/lg-aimers) · [실험 기록 문서](https://github.com/Jeon-byeong-yoon/lg-aimers/tree/main/docs)
+
 ### 📡 착용형 UWB 실내 낙상 관제 시스템
 > 2026 세종 AX 해커톤 본선 · 5인 팀 (서버 측위 파이프라인 · 경보 상태 UX 담당)
 
@@ -139,6 +141,7 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 
 | 레포 | 설명 |
 | --- | --- |
+| [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) | LG Aimers 9기 해커톤 — 투구 제구 성공 확률 예측 모델링·실험 기록 |
 | [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | KBO 경기 정보 + AI 프리뷰/리뷰 웹 앱 (준실시간 경기 정보 서비스) |
 | [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 / 코드 스멜 탐지용 MCP 서버 (Node·TypeScript stdio transport) |
 | [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 (GitHub Pages) |
