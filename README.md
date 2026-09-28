@@ -39,6 +39,7 @@
 **Frontend**
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
@@ -115,6 +116,20 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 
 `NestJS` `TypeScript` `TypeORM` `MySQL` `React` `Tree-sitter` `SonarQube` `Jenkins` `Docker`
 
+### ⚾ KBO AI Brief — 실시간 KBO 경기 정보 대시보드
+> 개인 프로젝트 · 단독 개발 · [kbo-ai-brief-three.vercel.app](https://kbo-ai-brief-three.vercel.app)
+
+네이버 스포츠 KBO API에서 경기·순위·선수 기록을 받아 실시간 중계, 투구 추적 스트라이크존, 연도별 기록실(2008~2026), 우승 확률 예측, OpenAI 기반 관전 포인트를 한 화면에 모은 대시보드입니다.
+
+- **받아온 값을 보여주는 데 그치지 않고 직접 계산합니다** — 우승 확률 20,000회 시뮬레이션, ERA+·OPS+ 시대 보정, 매직넘버, 투구 궤적에서 구속·통과 위치 산출. 홈 승률(0.5196)과 피타고리안 지수(1.80)는 가정값이 아니라 2008~2025 실경기에서 측정했습니다.
+- **이미 써둔 검증 결과가 틀렸다는 걸 찾아 문서를 정정했습니다** — WAR 결측이 0으로 들어와 2013년 이전 시즌은 전력 뎁스 항이 팀을 구분하지 못하고 있었습니다. "18시즌 검증"이 사실상 서로 다른 세 모델이었음을 확인하고, 가중치 재정규화로 고친 뒤 뎁스가 온전한 9시즌으로 검증을 다시 냈습니다.
+- **연도마다 다른 규정을 하드코딩하지 않았습니다** — 2009년은 무승부를 승률에 넣어 1위가 뒤집힙니다(KIA .609 vs SK .602). 두 규정을 모두 계산해 공식 기록과 맞는 쪽을 고르게 했습니다.
+- **테스트가 실제로 뭘 잡는지 확인했습니다** — 계산 함수 85개 테스트를 쓴 뒤, 과거에 겪은 버그 4개를 코드에 다시 심어 전부 빨간불이 뜨는지 검증했습니다.
+
+`Next.js 16` `React 19` `TypeScript` `Tailwind CSS` `OpenAI API` `Monte Carlo` `Vercel`
+
+→ [**kbo-ai-brief**](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) · [예측 모델 문서](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/PREDICTION.md) · [데이터 출처 정리](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/DATA-SOURCES.md)
+
 ### 그 외 프로젝트
 
 | 프로젝트 | 설명 | 기술 |
@@ -142,7 +157,7 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 | 레포 | 설명 |
 | --- | --- |
 | [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) | LG Aimers 9기 해커톤 — 투구 제구 성공 확률 예측 모델링·실험 기록 |
-| [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | KBO 경기 정보 + AI 프리뷰/리뷰 웹 앱 (준실시간 경기 정보 서비스) |
+| [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | 실시간 KBO 경기 정보 대시보드 — 중계·기록실·우승 확률 예측·AI 관전 포인트 (Next.js) |
 | [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 / 코드 스멜 탐지용 MCP 서버 (Node·TypeScript stdio transport) |
 | [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 (GitHub Pages) |
 | [community_be](https://github.com/Jeon-byeong-yoon/community_be) | 커뮤니티 서비스 백엔드 (Java) |
