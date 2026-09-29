@@ -144,7 +144,8 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 ## Internship
 
 ### 🏭 한일전기(주) × 홍익대학교 Fold팀 — 리크 검사 대시보드
-> 2026.07.27 ~ 09.30 · 산학협력 인턴십 · 5인 팀 · 프론트엔드 메인 (담당 화면 6종)
+> 2026.07.27 ~ 09.30 · 5인 팀 · 프론트엔드 메인 (담당 화면 6종)
+> 홍익대 세종 산학협력단 ANCHOR 사업단 「광역이음 산업 인프라 연계 Pre-인턴십」
 
 펌프 리크 검사 결과가 일일보고서 엑셀로만 남던 것을 모아, 모델별 불량률 추세와 평소와 다른 변화를 보여주는 Windows 데스크톱 앱입니다. 품질 분석 화면 넷(**F-04** 개요 · **F-05** 이상 경보 · **F-06** 모델별 추세 · **F-07** 측정값 분석)과 **F-13** 이상 알림, **F-14** 현장 표시 화면을 맡았습니다.
 
@@ -167,8 +168,11 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 | --- | --- | --- | --- |
 | 2026.07 ~ | **뉴노멀 — 실감형 재난 대피 훈련 시뮬레이터** — Unreal 기반, 화재 확산 시스템 담당 | 인터내셔널드론컴퍼니 · 홍익대 세종 산학협력단 | 산학협력 프로젝트 · 진행 중 |
 | 2026.08 ~ 09 | **LG Aimers 9기 Phase Ⅱ 온라인 해커톤** — 투구 제구 성공 확률 예측 | LG AI연구원 | 수료 · 최종 Public 1083.2462 |
+| 2026.08.31 | 🏅 **홍익대학교 총장상 — 우수동아리 (RE:Factory)** — 2026학년도 1학기 자기주도학습동아리, CodeVi를 주제로 활동 | 홍익대학교 | **수상** · 상장 및 상금 |
+| 2026.08.27 ~ 28 | **2026 AX 기술 역량 강화 세미나** — 광역이음 산업 인프라 연계 Pre-인턴십 과정 | 홍익대 세종 산학협력단 ANCHOR 사업단 · 융합인재센터 | 이수 |
 | 2026.07 ~ 08 | **2026 세종 AX 해커톤** — 착용형 UWB 실내 낙상 관제 시스템, 5인 팀 | 고려대 세종 · 홍익대 세종 산학협력단 | 본선 진출 |
 | 2026.06 ~ 08 | **LG Aimers 9기 Phase Ⅰ** — Tabular ML: From Classical Models to Foundation Models | LG AI연구원 | 수료 |
+| 2026.01 ~ 06 | **메타버스 융합SW 아카데미** — 메타버스 콘텐츠 및 SW 개발 과정 (SW전문인재양성사업) | 홍익대학교 메타버스 융합SW 아카데미 | 수료 |
 | 2025.10 ~ 11 | **딥페이크 탐지 AI 경진대회** — 얼굴 이미지·영상 프레임 진위 판별 모델 | 행정안전부 · 한국지능정보사회진흥원 (주관 국립과학수사연구원) | 참가 · Macro F1 0.6175 |
 
 ---
@@ -182,7 +186,7 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 | [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 / 코드 스멜 탐지용 MCP 서버 (Node·TypeScript stdio transport) |
 | [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 (GitHub Pages) |
 | [community_be](https://github.com/Jeon-byeong-yoon/community_be) | 커뮤니티 서비스 백엔드 (Java) |
-| [metaverse-course-projects](https://github.com/Jeon-byeong-yoon/metaverse-course-projects) | 메타버스 교과 프로젝트 모음 (Java) |
+| [metaverse-course-projects](https://github.com/Jeon-byeong-yoon/metaverse-course-projects) | 메타버스 융합SW 아카데미 과정 프로젝트 모음 (Java) |
 
 ---
 
