@@ -131,11 +131,24 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 
 → [**kbo-ai-brief**](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) · [예측 모델 문서](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/PREDICTION.md) · [데이터 출처 정리](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/DATA-SOURCES.md)
 
+### 🎭 딥페이크 범죄 대응 AI 탐지 모델 — 얼굴 진위 판별
+> 2025.10 ~ 11 · 4인 팀 · 데이터 구축 · 전처리 · 모델 실험 · **266팀 중 121위(상위 45%)** · Macro F1 0.6175
+
+공식 학습 데이터셋이 제공되지 않는 대회라, 모델링 전에 데이터를 직접 만드는 것부터가 과제였습니다. AI-Hub · FaceForensics++(C23) · DFDC · generated.photos 등을 섞어 구형 face swap부터 최신 생성형 딥페이크까지 분포에 함께 담았고, 최종 학습셋은 fake 15,646 / real 16,000으로 균형을 맞췄습니다.
+
+- **모델보다 데이터가 성능을 갈랐습니다** — 같은 계열 모델에서 생성형 AI 데이터를 넣고 얼굴 중심 크롭을 적용했더니 Macro F1이 **0.289 → 0.592**로 올랐습니다. 구조가 아니라 모델이 볼 수 있는 단서의 질이 바뀐 결과로 봤습니다.
+- **정체 구간의 원인을 분포 차이에서 찾았습니다** — 전처리를 바꿔도 점수가 움직이지 않던 구간이 반복됐는데, Real 과다로 인한 recall 저하보다 **정적 이미지와 영상 프레임의 분포 차이**(압축·블러·모션)가 더 근본적인 원인이었습니다.
+- **그래서 시간 축을 쓰는 모델이 가장 높았습니다** — ViT-B/16(0.5133) · ConvNeXt-Tiny(0.5476) · Swin V2-B(0.5748) · EfficientNet-B4(0.5935)를 거쳐, 프레임 간 temporal 정보를 학습하는 **3D CNN이 0.6175**로 최고점이었습니다.
+- **리더보드에서 쓸 수 없는 모델을 걸렀습니다** — validation은 안정적인데 제출 점수가 크게 어긋나는 모델, Real을 과다 예측해 Fake recall이 무너지는 모델은 제외했습니다. 정확도가 좋아 보여도 Fake를 놓치면 대회 목적과 맞지 않습니다.
+
+`Python` `3D CNN` `EfficientNet` `ConvNeXt` `Swin Transformer` `ViT` `Face Crop` `Macro F1`
+
+→ [**회고 글** — 데이터 구축부터 최종 제출까지](https://byoon2.tistory.com/18)
+
 ### 그 외 프로젝트
 
 | 프로젝트 | 설명 | 기술 |
 | --- | --- | --- |
-| 딥페이크 탐지 이진 분류 | 프레임 분리·얼굴 크롭·노이즈 제거로 학습 데이터 품질을 개선한 실제/생성 영상 판별 모델 | `Python` `Binary Classification` |
 | 119 신고 건수 예측 | 소방 데이터와 기상청 날씨 데이터를 결합, 12개 지점별 전처리 후 시계열 예측 | `TensorFlow` `Keras` `LSTM` |
 | 헬스케어 DB 설계 | 사용자·신체정보·활동·수면·영양·체중 엔터티를 분리하고 PK/FK 관계를 정의한 관계형 DB | `MySQL` `ERD` `SQL` |
 
@@ -172,7 +185,7 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 | 2026.07 ~ 08 | **2026 세종 AX 해커톤** — 착용형 UWB 실내 낙상 관제 시스템, 5인 팀 | 고려대 세종 · 홍익대 세종 산학협력단 | 본선 진출 |
 | 2026.06 ~ 08 | **LG Aimers 9기 Phase Ⅰ** — Tabular ML: From Classical Models to Foundation Models | LG AI연구원 | 수료 |
 | 2026.01 ~ 06 | **메타버스 융합SW 아카데미** — 메타버스 콘텐츠 및 SW 개발 과정 (SW전문인재양성사업) | 홍익대학교 메타버스 융합SW 아카데미 | 수료 |
-| 2025.10 ~ 11 | **딥페이크 탐지 AI 경진대회** — 얼굴 이미지·영상 프레임 진위 판별 모델 | 행정안전부 · 한국지능정보사회진흥원 (주관 국립과학수사연구원) | 참가 · Macro F1 0.6175 |
+| 2025.10 ~ 11 | **딥페이크 범죄 대응을 위한 AI 탐지 모델 경진대회** — 얼굴 진위 판별, 4인 팀 | 행정안전부 · 한국지능정보사회진흥원 (주관 국립과학수사연구원) | 266팀 중 121위 (상위 45%) · Macro F1 0.6175 (3D CNN) |
 
 ---
 
