@@ -4,7 +4,7 @@
 
 **AI 개발 도구를 활용해 더 효율적으로 문제를 해결하는 풀스택 개발자**
 
-홍익대학교 세종캠퍼스 소프트웨어융합학과 · Data · AI · Database
+홍익대학교 소프트웨어융합학과 · Data · AI · Database
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://jeon-byeong-yoon.github.io/portfolio/)
 [![Tistory](https://img.shields.io/badge/Blog-EE5900?style=for-the-badge&logo=tistory&logoColor=white)](https://byoon2.tistory.com/)
@@ -19,7 +19,7 @@
 
 프로젝트를 진행하며 **좋은 결과는 모델 구조뿐 아니라 데이터 품질, 전처리 방식, 변수 구조, 학습 흐름을 체계적으로 관리하는 과정에서 나온다**는 점을 배웠습니다.
 
-- 🎓 홍익대학교 세종캠퍼스 소프트웨어융합학과
+- 🎓 홍익대학교 소프트웨어융합학과
 - 🔭 관심 분야: 데이터 분석 · 인공지능 · 데이터베이스 · 시스템 설계
 - 🌐 [포트폴리오](https://jeon-byeong-yoon.github.io/portfolio/) · [기술 블로그](https://byoon2.tistory.com/)
 
@@ -79,71 +79,46 @@
 
 ## Projects
 
-### 🏆 LG Aimers 9기 — 야구 투구 제구 성공 확률 예측
-> LG AI연구원 해커톤 Phase 2 · 3인 팀 (모델링 · 실험 설계 · 제출 파이프라인)
+### LG Aimers 9기 — 야구 투구 제구 성공 확률 예측
+> LG AI연구원 해커톤 Phase 2 · 3인 팀 · 1,087팀 중 284위(상위 26%)
 
-KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구 성공 확률을 예측하는 이진 분류 과제.
-공식 Random Forest 베이스라인(Public **900.7385**)에서 출발해 약 **210차례 실험**을 거쳐, 6개 모델 가중 블렌드 위에 세그먼트 보정층을 얹은 구조로 Public **1083.2462**(+182.5)에 도달했습니다. 참가자 2,403명 · **1,087팀 중 284위(상위 26%)** 로 마쳤습니다.
+KBO 투구 데이터와 Trackman 측정 로그로 제구 성공 확률을 맞히는 이진 분류 모델입니다. 6개 모델 가중 블렌드에 세그먼트 보정층을 얹어 Public 1083.2462로 마쳤습니다.
 
-- 6성분 가중 블렌드(HistGradientBoosting · CatBoost · 엔티티 임베딩 신경망 등) + 볼카운트·좌우스플릿 축 잔차 보정층 설계
-- 2022~2024 시간순 폴드 검증을 리더보드와 짝지어 효과의 부호·유의성을 판정 — 16번 중 14번 방향 적중
-- 평가 서버와 동일한 런타임 환경 게이트를 두어 제출 무효화 사전 차단
+`Python` `CatBoost` `HistGradientBoosting` `Entity Embedding` `Ensemble` `Time-Series CV`
 
-`Python` `CatBoost` `HistGradientBoosting` `Entity Embedding` `Ensemble` `Calibration` `Time-Series CV`
+→ [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) · [실험 기록 문서](https://github.com/Jeon-byeong-yoon/lg-aimers/tree/main/docs)
 
-→ [**lg-aimers**](https://github.com/Jeon-byeong-yoon/lg-aimers) · [실험 기록 문서](https://github.com/Jeon-byeong-yoon/lg-aimers/tree/main/docs)
+### 착용형 UWB 실내 낙상 관제 시스템
+> 2026 세종 AX 해커톤 SW융합클러스터 인재상 · 팀 `Frame work on` 5인 · 서버 측위 파이프라인 · 경보 상태 UX 담당
 
-### 📡 착용형 UWB 실내 낙상 관제 시스템
-> 2026 세종 AX 해커톤 **SW융합클러스터 인재상** · 팀 `Frame work on` 5인 (서버 측위 파이프라인 · 경보 상태 UX 담당)
-
-노인요양시설 대상 실내 위치·낙상 관제 시스템. 카메라 대신 착용형 UWB 태그로 위치를, 내장 가속도계로 낙상을 감지해 **CCTV가 법으로 금지된 화장실·목욕실까지 관제 범위**에 포함했습니다.
-
-- 실기기 없이 개발하도록 50Hz 원시 신호 생성기 + NDJSON 리플레이 하네스 선구축
-- 방향 센서 없이 두 앵커 거리만으로 좌표를 구하는 반평면 삼각측량 구현 (복원 오차 1mm 검증)
-- 경보 UX를 DOM과 분리된 상태 저장소로 재구성 — 이벤트 ID가 바뀌어도 태그 단위 lifecycle 유지
+노인요양시설용 실내 위치·낙상 관제 시스템입니다. 카메라 대신 착용형 UWB 태그로 위치를, 내장 가속도계로 낙상을 감지해 CCTV를 둘 수 없는 구역까지 범위에 넣었습니다.
 
 `TypeScript` `Node.js` `UWB` `Trilateration` `SSE` `Signal Smoothing`
 
-### 🧭 CodeVi — 코드 시각화 · 품질 분석 플랫폼
-> 캡스톤 디자인 · 5인 팀 (백엔드 메트릭 API · 분석 파이프라인 연동 · 인증 담당) · 비공개 저장소
+### CodeVi — 코드 시각화 · 품질 분석 플랫폼
+> 캡스톤 디자인 · 5인 팀 · 백엔드 메트릭 API · 분석 파이프라인 연동 · 인증 담당 · 비공개 저장소
 
-소스 코드의 AST를 추출해 Directory → File → Class → Function 계층을 인터랙티브 노드-엣지 그래프로 시각화하고, 복잡도·결합도 지표로 리팩토링 지점을 드러내는 플랫폼입니다.
-
-- 코드 품질 메트릭 API를 MVP까지 구현 — Cyclomatic Complexity, Halstead, CBO/RFC/LCOM 등 산출 및 저장
-- 원격 파서 API 연동과 ZIP 업로드 분석 프록시 엔드포인트를 붙여 GitHub·로컬 코드 양쪽 온보딩 경로 확보
-- 전역 응답 포맷(`ApiResponse`) 인터셉터로 API 계약을 통일하고 Swagger Bearer 인증 적용
-- Kakao OAuth 소셜 로그인 구현, CodeVi 분석용 Jenkinsfile 작성으로 빌드 후 자동 스냅샷 연결
+소스 코드의 AST를 추출해 Directory → File → Class → Function 계층을 노드-엣지 그래프로 시각화하고, 복잡도·결합도 지표로 리팩토링 지점을 드러내는 플랫폼입니다.
 
 `NestJS` `TypeScript` `TypeORM` `MySQL` `React` `Tree-sitter` `SonarQube` `Jenkins` `Docker`
 
-### ⚾ KBO AI Brief — 실시간 KBO 경기 정보 대시보드
+### KBO AI Brief — 실시간 KBO 경기 정보 대시보드
 > 개인 프로젝트 · 단독 개발 · [kbo-ai-brief-three.vercel.app](https://kbo-ai-brief-three.vercel.app)
 
-네이버 스포츠 KBO API에서 경기·순위·선수 기록을 받아 실시간 중계, 투구 추적 스트라이크존, 연도별 기록실(2008~2026), 우승 확률 예측, OpenAI 기반 관전 포인트를 한 화면에 모은 대시보드입니다.
-
-- **받아온 값을 보여주는 데 그치지 않고 직접 계산합니다** — 우승 확률 20,000회 시뮬레이션, ERA+·OPS+ 시대 보정, 매직넘버, 투구 궤적에서 구속·통과 위치 산출. 홈 승률(0.5196)과 피타고리안 지수(1.80)는 가정값이 아니라 2008~2025 실경기에서 측정했습니다.
-- **이미 써둔 검증 결과가 틀렸다는 걸 찾아 문서를 정정했습니다** — WAR 결측이 0으로 들어와 2013년 이전 시즌은 전력 뎁스 항이 팀을 구분하지 못하고 있었습니다. "18시즌 검증"이 사실상 서로 다른 세 모델이었음을 확인하고, 가중치 재정규화로 고친 뒤 뎁스가 온전한 9시즌으로 검증을 다시 냈습니다.
-- **연도마다 다른 규정을 하드코딩하지 않았습니다** — 2009년은 무승부를 승률에 넣어 1위가 뒤집힙니다(KIA .609 vs SK .602). 두 규정을 모두 계산해 공식 기록과 맞는 쪽을 고르게 했습니다.
-- **테스트가 실제로 뭘 잡는지 확인했습니다** — 계산 함수 85개 테스트를 쓴 뒤, 과거에 겪은 버그 4개를 코드에 다시 심어 전부 빨간불이 뜨는지 검증했습니다.
-- **막혀 있지 않은 것과 써도 되는 것을 구분했습니다** — 외부 API 요청에 브라우저인 척하는 User-Agent와 Referer를 붙이고 있었는데, 헤더 없이도 정상 응답이 오는 걸 확인하고 13개 파일에 흩어진 사본을 한 곳으로 모아 앱 이름을 그대로 보내도록 바꿨습니다. 선수 사진도 CDN이 열려 있지만 초상권 때문에 쓰지 않습니다.
+네이버 스포츠 KBO API로 실시간 중계, 투구 추적 스트라이크존, 연도별 기록실(2008~2026), 우승 확률 예측, AI 관전 포인트를 한 화면에 모은 야구 정보 대시보드입니다.
 
 `Next.js 16` `React 19` `TypeScript` `Tailwind CSS` `OpenAI API` `Monte Carlo` `Vercel`
 
-→ [**kbo-ai-brief**](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) · [예측 모델 문서](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/PREDICTION.md) · [데이터 출처 정리](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/DATA-SOURCES.md)
+→ [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) · [예측 모델 문서](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/PREDICTION.md)
 
-### 🎭 딥페이크 범죄 대응 AI 탐지 모델 — 얼굴 진위 판별
-> 2025.10 ~ 11 · 4인 팀 · 데이터 구축 · 전처리 · 모델 실험 · **266팀 중 121위(상위 45%)** · Macro F1 0.6175
+### 딥페이크 범죄 대응 AI 탐지 모델 — 얼굴 진위 판별
+> 2025.10 ~ 11 · 4인 팀 · 266팀 중 121위(상위 45%) · Macro F1 0.6175
 
-공식 학습 데이터셋이 제공되지 않는 대회라, 모델링 전에 데이터를 직접 만드는 것부터가 과제였습니다. AI-Hub · FaceForensics++(C23) · DFDC · generated.photos 등을 섞어 구형 face swap부터 최신 생성형 딥페이크까지 분포에 함께 담았고, 최종 학습셋은 fake 15,646 / real 16,000으로 균형을 맞췄습니다.
+얼굴 이미지와 영상 프레임에서 실제와 가짜를 가르는 분류 모델입니다. 공식 데이터셋이 없어 여러 공개 데이터를 섞어 직접 구축했고, 최종적으로 3D CNN이 가장 높았습니다.
 
-- **모델보다 데이터가 성능을 갈랐습니다** — 같은 계열 모델에서 생성형 AI 데이터를 넣고 얼굴 중심 크롭을 적용했더니 Macro F1이 **0.289 → 0.592**로 올랐습니다. 구조가 아니라 모델이 볼 수 있는 단서의 질이 바뀐 결과로 봤습니다.
-- **정체 구간의 원인을 분포 차이에서 찾았습니다** — 전처리를 바꿔도 점수가 움직이지 않던 구간이 반복됐는데, Real 과다로 인한 recall 저하보다 **정적 이미지와 영상 프레임의 분포 차이**(압축·블러·모션)가 더 근본적인 원인이었습니다.
-- **그래서 시간 축을 쓰는 모델이 가장 높았습니다** — ViT-B/16(0.5133) · ConvNeXt-Tiny(0.5476) · Swin V2-B(0.5748) · EfficientNet-B4(0.5935)를 거쳐, 프레임 간 temporal 정보를 학습하는 **3D CNN이 0.6175**로 최고점이었습니다.
-- **리더보드에서 쓸 수 없는 모델을 걸렀습니다** — validation은 안정적인데 제출 점수가 크게 어긋나는 모델, Real을 과다 예측해 Fake recall이 무너지는 모델은 제외했습니다. 정확도가 좋아 보여도 Fake를 놓치면 대회 목적과 맞지 않습니다.
+`Python` `3D CNN` `EfficientNet` `ConvNeXt` `Swin Transformer` `ViT` `Face Crop`
 
-`Python` `3D CNN` `EfficientNet` `ConvNeXt` `Swin Transformer` `ViT` `Face Crop` `Macro F1`
-
-→ [**회고 글** — 데이터 구축부터 최종 제출까지](https://byoon2.tistory.com/18)
+→ [회고 글 — 데이터 구축부터 최종 제출까지](https://byoon2.tistory.com/18)
 
 ### 그 외 프로젝트
 
@@ -156,22 +131,13 @@ KBO 리그 실제 투구 데이터와 Trackman 측정 로그로 투구의 제구
 
 ## Internship
 
-### 🏭 한일전기(주) × 홍익대학교 Fold팀 — 리크 검사 대시보드
+### 한일전기(주) × 홍익대학교 Fold팀 — 리크 검사 대시보드
 > 2026.07.27 ~ 09.30 · 5인 팀 · 프론트엔드 메인 (담당 화면 6종)
-> 홍익대 세종 산학협력단 ANCHOR 사업단 「광역이음 산업 인프라 연계 Pre-인턴십」
+> 홍익대 세종 산학협력단 ANCHOR 사업단 「광역이음 산업 인프라 연계 Pre-인턴십」 · 비공개 저장소
 
-펌프 리크 검사 결과가 일일보고서 엑셀로만 남던 것을 모아, 모델별 불량률 추세와 평소와 다른 변화를 보여주는 Windows 데스크톱 앱입니다. 품질 분석 화면 넷(**F-04** 개요 · **F-05** 이상 경보 · **F-06** 모델별 추세 · **F-07** 측정값 분석)과 **F-13** 이상 알림, **F-14** 현장 표시 화면을 맡았습니다.
-
-- **계산과 화면의 경계를 먼저 그었습니다** — 집계·판정 계산이 다른 팀원 몫이라, 같은 모양을 내주는 임시 공급자(`provider.py`)를 경계로 두고 화면을 먼저 완성했습니다. 계산 계층이 나온 뒤에는 이 파일 하나만 교체하고 화면 코드는 그대로 뒀습니다.
-- **같은 값을 두 곳에서 만들지 않았습니다** — F-14 현장 표시는 집계를 한 줄도 하지 않고 기존 화면의 계산 결과를 받아 다시 세웁니다. 두 곳에서 계산하면 현장 화면과 담당자 화면이 서로 다른 숫자를 말하게 됩니다.
-- **숫자가 실제보다 좋아 보이지 않도록 정했습니다** — 계측 한계 코드(999)는 값에서 빼되 건수를 반드시 표기하고(빼고 숨기면 NG가 적어 보임), 기록 없는 항목은 `0.00%`가 아니라 `기록 없음`으로 두었습니다(0%는 검사했는데 무결점으로 읽힘).
-- **목업을 Qt로 옮기며 생긴 어긋남을 하나씩 대조했습니다** — `line-height`·`box-shadow`·`border-radius`처럼 Qt에 없는 CSS를 흉내 내다 생긴 간격·배지·드롭다운 문제를 목업과 나란히 놓고 잡았고, 목업의 `:root` 토큰을 `theme.py` 한 벌로 옮겨 라이트·다크를 함께 관리합니다.
-
-담당 화면마다 시험을 추가했습니다 (F-07 17개 · F-14 24개 등, 프로젝트 전체 766개 통과).
+펌프 리크 검사 결과가 일일보고서 엑셀로만 남던 것을 모아, 모델별 불량률 추세와 평소와 다른 변화를 보여주는 Windows 데스크톱 앱입니다. 품질 분석 화면 넷과 이상 알림·현장 표시 화면을 맡았습니다.
 
 `Python` `PySide6` `QtCharts` `SQLite` `pandas` `Parquet` `관리도(SPC)`
-
-> 비공개 저장소입니다.
 
 ---
 
