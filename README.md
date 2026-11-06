@@ -77,50 +77,40 @@
 ### LG Aimers 9기 — 야구 투구 제구 성공 확률 예측
 > LG AI연구원 해커톤 Phase 2 · 3인 팀 · 1,087팀 중 284위(상위 26%)
 
-KBO 투구 데이터와 Trackman 측정 로그로 제구 성공 확률을 맞히는 이진 분류 모델입니다. 6개 모델 가중 블렌드에 세그먼트 보정층을 얹어 Public 1083.2462로 마쳤습니다.
-
-`Python` `CatBoost` `HistGradientBoosting` `Entity Embedding` `Ensemble` `Time-Series CV`
+KBO 투구 데이터와 Trackman 측정 로그를 기반으로 투수의 제구 성공 확률을 예측하는 이진 분류 모델입니다.
 
 → [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) · [실험 기록 문서](https://github.com/Jeon-byeong-yoon/lg-aimers/tree/main/docs)
 
 ### 착용형 UWB 실내 낙상 관제 시스템
 > 2026 세종 AX 해커톤 SW융합클러스터 인재상 · 팀 `Frame work on` 5인 · 서버 측위 파이프라인 · 경보 상태 UX 담당
 
-노인요양시설용 실내 위치·낙상 관제 시스템입니다. 카메라 대신 착용형 UWB 태그로 위치를, 내장 가속도계로 낙상을 감지해 CCTV를 둘 수 없는 구역까지 범위에 넣었습니다.
-
-`TypeScript` `Node.js` `UWB` `Trilateration` `SSE` `Signal Smoothing`
+착용형 UWB 태그와 내장 가속도계로 카메라 없이 요양시설 내 어르신의 실시간 위치와 낙상을 감지하는 관제 시스템입니다.
 
 ### CodeVi — 코드 시각화 · 품질 분석 플랫폼
 > 캡스톤 디자인 · 5인 팀 · 백엔드 메트릭 API · 분석 파이프라인 연동 · 인증 담당 · 비공개 저장소
 
-소스 코드의 AST를 추출해 Directory → File → Class → Function 계층을 노드-엣지 그래프로 시각화하고, 복잡도·결합도 지표로 리팩토링 지점을 드러내는 플랫폼입니다.
-
-`NestJS` `TypeScript` `TypeORM` `MySQL` `React` `Tree-sitter` `SonarQube` `Jenkins` `Docker`
+소스 코드의 AST를 노드-엣지 그래프로 시각화하고 복잡도·결합도 지표로 리팩토링 지점을 분석하는 플랫폼입니다.
 
 ### KBO AI Brief — 실시간 KBO 경기 정보 대시보드
 > 개인 프로젝트 · 단독 개발 · [kbo-ai-brief-three.vercel.app](https://kbo-ai-brief-three.vercel.app)
 
-네이버 스포츠 KBO API로 실시간 중계, 투구 추적 스트라이크존, 연도별 기록실(2008~2026), 우승 확률 예측, AI 관전 포인트를 한 화면에 모은 야구 정보 대시보드입니다.
-
-`Next.js 16` `React 19` `TypeScript` `Tailwind CSS` `OpenAI API` `Monte Carlo` `Vercel`
+실시간 경기 중계, 투구 추적, 연도별 기록실, 우승 확률 예측, AI 관전 포인트를 한곳에 모은 KBO 야구 대시보드입니다.
 
 → [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) · [예측 모델 문서](https://github.com/Jeon-byeong-yoon/kbo-ai-brief/blob/main/docs/PREDICTION.md)
 
 ### 딥페이크 범죄 대응 AI 탐지 모델 — 얼굴 진위 판별
 > 2025.10 ~ 11 · 4인 팀 · 266팀 중 121위(상위 45%) · Macro F1 0.6175
 
-얼굴 이미지와 영상 프레임에서 실제와 가짜를 가르는 분류 모델입니다. 공식 데이터셋이 없어 여러 공개 데이터를 섞어 직접 구축했고, 최종적으로 3D CNN이 가장 높았습니다.
-
-`Python` `3D CNN` `EfficientNet` `ConvNeXt` `Swin Transformer` `ViT` `Face Crop`
+얼굴 이미지와 영상 프레임에서 실제 촬영본과 딥페이크 합성물을 판별하는 AI 탐지 모델입니다.
 
 → [회고 글 — 데이터 구축부터 최종 제출까지](https://byoon2.tistory.com/18)
 
 ### 그 외 프로젝트
 
-| 프로젝트 | 설명 | 기술 |
-| --- | --- | --- |
-| 119 신고 건수 예측 | 소방 데이터와 기상청 날씨 데이터를 결합, 12개 지점별 전처리 후 시계열 예측 | `TensorFlow` `Keras` `LSTM` |
-| 헬스케어 DB 설계 | 사용자·신체정보·활동·수면·영양·체중 엔터티를 분리하고 PK/FK 관계를 정의한 관계형 DB | `MySQL` `ERD` `SQL` |
+| 프로젝트 | 설명 |
+| --- | --- |
+| 119 신고 건수 예측 | 소방 신고 데이터와 기상청 날씨 데이터를 결합해 지점별 신고 건수를 예측하는 시계열 모델 |
+| 헬스케어 DB 설계 | 사용자·신체정보·활동·수면·영양·체중 데이터를 관리하기 위해 설계한 관계형 데이터베이스 |
 
 ---
 
@@ -130,9 +120,7 @@ KBO 투구 데이터와 Trackman 측정 로그로 제구 성공 확률을 맞히
 > 2026.07.27 ~ 09.30 · 5인 팀 · 프론트엔드 메인 (담당 화면 6종)
 > 홍익대 세종 산학협력단 ANCHOR 사업단 「광역이음 산업 인프라 연계 Pre-인턴십」 · 비공개 저장소
 
-펌프 리크 검사 결과가 일일보고서 엑셀로만 남던 것을 모아, 모델별 불량률 추세와 평소와 다른 변화를 보여주는 Windows 데스크톱 앱입니다. 품질 분석 화면 넷과 이상 알림·현장 표시 화면을 맡았습니다.
-
-`Python` `PySide6` `QtCharts` `SQLite` `pandas` `Parquet` `관리도(SPC)`
+일일보고서 엑셀로만 관리되던 펌프 리크 검사 데이터를 통합해 모델별 불량률 추세와 이상 징후를 모니터링하는 데스크톱 대시보드입니다.
 
 ---
 
@@ -156,11 +144,11 @@ KBO 투구 데이터와 Trackman 측정 로그로 제구 성공 확률을 맞히
 | 레포 | 설명 |
 | --- | --- |
 | [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) | LG Aimers 9기 해커톤 — 투구 제구 성공 확률 예측 모델링·실험 기록 |
-| [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | 실시간 KBO 경기 정보 대시보드 — 중계·기록실·우승 확률 예측·AI 관전 포인트 (Next.js) |
-| [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 / 코드 스멜 탐지용 MCP 서버 (Node·TypeScript stdio transport) |
-| [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 (GitHub Pages) |
-| [community_be](https://github.com/Jeon-byeong-yoon/community_be) | 커뮤니티 서비스 백엔드 (Java) |
-| [metaverse-course-projects](https://github.com/Jeon-byeong-yoon/metaverse-course-projects) | 메타버스 융합SW 아카데미 과정 프로젝트 모음 (Java) |
+| [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | 실시간 KBO 경기 정보 대시보드 — 중계·기록실·우승 확률 예측·AI 관전 포인트 |
+| [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 및 코드 스멜 탐지용 MCP 서버 |
+| [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 |
+| [community_be](https://github.com/Jeon-byeong-yoon/community_be) | 커뮤니티 서비스 백엔드 |
+| [metaverse-course-projects](https://github.com/Jeon-byeong-yoon/metaverse-course-projects) | 메타버스 융합SW 아카데미 과정 프로젝트 모음 |
 
 ---
 
