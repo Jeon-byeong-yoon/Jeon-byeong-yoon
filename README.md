@@ -113,6 +113,13 @@ KBO 투구 데이터와 Trackman 측정 로그를 기반으로 투수의 제구 
 
 → [requirements-dataset](https://github.com/Jeon-byeong-yoon/requirements-dataset)
 
+### Code Smell Detection MCP — Python 정적 분석 MCP 서버
+> 개인 사이드 프로젝트 · 단독 개발 · MCP stdio 서버 · 무의존성 ZIP 패키징 · 응답 정규화
+
+Claude Code·Cursor·Codex·Antigravity 등 AI 코딩 에이전트에서 별도 분석기 설치 없이 로컬 Python 프로젝트의 코드 스멜 정적 분석을 호출할 수 있도록 구현한 MCP(Model Context Protocol) 서버입니다.
+
+→ [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp)
+
 ### 그 외 프로젝트
 
 | 프로젝트 | 설명 |
