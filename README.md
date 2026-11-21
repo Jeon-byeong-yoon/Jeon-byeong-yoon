@@ -8,6 +8,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://jeon-byeong-yoon.github.io/portfolio/)
 [![Tistory](https://img.shields.io/badge/Blog-EE5900?style=for-the-badge&logo=tistory&logoColor=white)](https://byoon2.tistory.com/)
+[![Resume](https://img.shields.io/badge/Resume-2563EB?style=for-the-badge&logo=ReadMe&logoColor=white)](https://github.com/Jeon-byeong-yoon/Jeon-byeong-yoon/raw/main/%EC%A0%84%EB%B3%91%EC%9C%A4_%EC%9D%B4%EB%A0%A5%EC%84%9C.pdf?download=)
 
 </div>
 
@@ -21,7 +22,7 @@
 
 - 🎓 홍익대학교 소프트웨어융합학과
 - 🔭 관심 분야: 데이터 분석 · 인공지능 · 데이터베이스 · 시스템 설계
-- 🌐 [포트폴리오](https://jeon-byeong-yoon.github.io/portfolio/) · [기술 블로그](https://byoon2.tistory.com/)
+- 🌐 [포트폴리오](https://jeon-byeong-yoon.github.io/portfolio/) · [기술 블로그](https://byoon2.tistory.com/) · [이력서 다운로드 (PDF)](https://github.com/Jeon-byeong-yoon/Jeon-byeong-yoon/raw/main/%EC%A0%84%EB%B3%91%EC%9C%A4_%EC%9D%B4%EB%A0%A5%EC%84%9C.pdf?download=)
 
 ---
 
