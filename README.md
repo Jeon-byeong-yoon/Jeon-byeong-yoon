@@ -106,6 +106,13 @@ KBO 투구 데이터와 Trackman 측정 로그를 기반으로 투수의 제구 
 
 → [회고 글 — 데이터 구축부터 최종 제출까지](https://byoon2.tistory.com/18)
 
+### 소프트웨어 요구사항 대조 학습 데이터셋 구축
+> 개인 사이드 프로젝트 · 단독 개발 · 데이터 정제 · Hard Pair 증강 · 5-Seed 검증
+
+공개 요구사항 데이터셋(PROMISE·PURE·FNFC)의 파생·중복을 제거하고 어휘·의미 유사도 4분면 분석과 LLM 증강으로 대조 학습(Contrastive Learning)용 Hard Positive/Negative 쌍을 구축한 데이터 파이프라인입니다.
+
+→ [requirements-dataset](https://github.com/Jeon-byeong-yoon/requirements-dataset)
+
 ### 그 외 프로젝트
 
 | 프로젝트 | 설명 |
@@ -151,6 +158,7 @@ KBO 투구 데이터와 Trackman 측정 로그를 기반으로 투수의 제구 
 | --- | --- |
 | [lg-aimers](https://github.com/Jeon-byeong-yoon/lg-aimers) | LG Aimers 9기 해커톤 — 투구 제구 성공 확률 예측 모델링·실험 기록 |
 | [kbo-ai-brief](https://github.com/Jeon-byeong-yoon/kbo-ai-brief) | 실시간 KBO 경기 정보 대시보드 — 중계·기록실·우승 확률 예측·AI 관전 포인트 |
+| [requirements-dataset](https://github.com/Jeon-byeong-yoon/requirements-dataset) | 소프트웨어 요구사항 분석·분류를 위한 대조 학습(Contrastive Learning) 데이터셋 구축 파이프라인 |
 | [code-smell-detection-mcp](https://github.com/Jeon-byeong-yoon/code-smell-detection-mcp) | 정적 분석 및 코드 스멜 탐지용 MCP 서버 |
 | [portfolio](https://github.com/Jeon-byeong-yoon/portfolio) | 개인 포트폴리오 웹사이트 |
 | [community_be](https://github.com/Jeon-byeong-yoon/community_be) | 커뮤니티 서비스 백엔드 |
